@@ -43,5 +43,4 @@ public class SongController {
     public ResponseEntity<?> showLatestSong(){
         return ResponseEntity.ok(songService.showLatestSong());
     }
-
 }

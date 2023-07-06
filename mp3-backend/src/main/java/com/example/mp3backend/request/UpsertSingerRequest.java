@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
 
 @Getter
 @Setter
@@ -14,7 +13,6 @@ import java.util.Date;
 public class UpsertSingerRequest {
     private String name;
     private String birthday;
-
     private String country;
     private String image;
     private String description;

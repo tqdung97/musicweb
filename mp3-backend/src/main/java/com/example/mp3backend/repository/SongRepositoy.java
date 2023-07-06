@@ -17,6 +17,14 @@ public interface SongRepositoy extends JpaRepository<Song, Long> {
 
     Iterable<Song> findSongByUser(User user);
 
-    @Query(value = "select  * from  song left join user u on u.id = song.id order by creation_time desc limit 2", nativeQuery = true)
-    List<Song> findSongByCreationTime();
+    @Query(value = "select * from song order by creation_time desc limit 10", nativeQuery = true)
+    List<Song> findAllByCreationTimeOrderByCreationTime();
+
+    @Query(value = "select * from song order by num_of_view desc limit 10", nativeQuery = true)
+    Iterable<Song> findAllByNumberOfViewOrderByNumberOfView();
+
+    Iterable<Song> findAllByNameContains(String keyword);
+    Iterable<Song> findAllByUser_Id(Long idUser);
+
+
 }

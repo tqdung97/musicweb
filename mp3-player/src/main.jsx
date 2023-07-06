@@ -23,7 +23,6 @@ import {
   MVUSUk,
   MVHoaTau,
   MVKpop,
-  Login,
 } from "./pages/Allpages";
 import store from "./store/index";
 import { Provider } from "react-redux";
@@ -63,7 +62,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/search" element={<Search />} />
             <Route path="/songplaying" element={<SongPlaying />} />
           </Route>
-          <Route path="/login" element={<Login/>} />
         </Routes>
       </BrowserRouter>
     </Provider>

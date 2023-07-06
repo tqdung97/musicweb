@@ -17,7 +17,6 @@ import MVVietNam from "../Mv/VietNam";
 import MVUSUk from "../Mv/Usuk";
 import MVHoaTau from "../Mv/HoaTau";
 import MVKpop from "../Mv/Kpop";
-import Login from "../Login/Login";
 
 export {
   Category,
@@ -39,6 +38,4 @@ export {
   MVUSUk,
   MVHoaTau,
   MVKpop,
-  Login,
-  
 };

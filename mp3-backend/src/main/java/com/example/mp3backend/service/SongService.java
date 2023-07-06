@@ -6,7 +6,6 @@ import com.example.mp3backend.exception.NotFoundException;
 import com.example.mp3backend.repository.*;
 import com.example.mp3backend.request.UpsertSongRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -53,8 +52,6 @@ public class SongService {
             throw new NotFoundException("Không tìm thấy User với email = " + email);
         });
 
-
-
         Song song = Song.builder()
                 .name(request.getName())
                 .numberOfView(0L)
@@ -86,6 +83,6 @@ public class SongService {
     }
 
     public List<Song> showLatestSong() {
-        return songRepositoy.findSongByCreationTime();
+        return songRepositoy.findAllByCreationTimeOrderByCreationTime();
     }
 }

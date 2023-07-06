@@ -1,7 +1,6 @@
 package com.example.mp3backend.service;
 
 import com.example.mp3backend.entity.Category;
-import com.example.mp3backend.exception.NotFoundException;
 import com.example.mp3backend.repository.CategoryRepository;
 import com.example.mp3backend.request.UpsertCategoryRequest;
 import org.springframework.beans.factory.annotation.Autowired;

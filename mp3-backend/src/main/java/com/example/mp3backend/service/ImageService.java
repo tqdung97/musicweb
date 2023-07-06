@@ -79,7 +79,7 @@ public class ImageService {
         // image.png -> png
         // avatar.jpg -> jpg
         // Kiểm tra đuôi file (jpg, png, jpeg)
-        String fileExtension = getFileExtensiton(fileName);
+        String fileExtension = getFileExtension(fileName);
         if(!checkFileExtension(fileExtension)) {
             throw new BadRequestException("file không đúng định dạng");
         }
@@ -91,7 +91,7 @@ public class ImageService {
         }
     }
 
-    private String getFileExtensiton(String fileName) {
+    private String getFileExtension(String fileName) {
         int lastIndexOf = fileName.lastIndexOf(".");
         return fileName.substring(lastIndexOf + 1);
     }
